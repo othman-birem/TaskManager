@@ -53,13 +53,13 @@ To run this project locally, ensure you have the following installed:
 **Backend (ASP.NET Core)**
 Navigate to the backend directory and restore .NET packages:
 ```bash
-cd TaskManager.Api
+cd TaskManager.Server
 dotnet restore
 ```
 **Frontend (Angular)**
 Navigate to the frontend directory and install Node dependencies:
 ```bash
-cd TaskManager.Client
+cd taskmanager.client
 npm install
 ```
 ### 3. Configure the Database
@@ -69,7 +69,7 @@ To start a SQL Server container using Docker, run:
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=YourPassword!" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
 ```
-Update the connection string in `appsettings.json` (found in `TaskManager.Api`) to match your database configuration.
+Update the connection string in `appsettings.json` (found in `TaskManager.Server`) to match your database configuration.
 
 ### 4. Run Database Migrations
 Navigate to the backend folder and run migrations to set up the database:
@@ -85,14 +85,14 @@ To enable email notifications, create a `UserSecrets.json` or use environment va
 Start the ASP.NET Core API:
 
 ```bash
-cd TaskManager.Api
+cd TaskManager.Server
 dotnet run
 ```
 **Frontend (Angular)**
 Start the Angular frontend application:
 
 ```bash
-cd TaskManager.Client
+cd taskmanager.client
 ng serve
 ```
 The backend will be available at `http://localhost:5000`, and the frontend at `http://localhost:4200`.
@@ -100,20 +100,20 @@ The backend will be available at `http://localhost:5000`, and the frontend at `h
 ## Project Structure
 ```bash
 TaskManager/
-├── TaskManager.Api/            # ASP.NET Core backend
+├── TaskManager.Server/          # ASP.NET Core backend
 │   ├── Controllers/             # API controllers
 │   ├── Models/                  # Data models and entities
 │   ├── Services/                # Business logic services
 │   └── appsettings.json         # Application settings
-├── TaskManager.Client/          # Angular frontend
+├── taskmanager.client/          # Angular frontend
 │   ├── src/
-│   ├── app/
+│   │   └── app/
 │   └── angular.json             # Angular configuration
 └── README.md                    # Project readme
 ```
 ## Running the Application
-**Run Backend:** Open a terminal in the `TaskManager.Api` folder and run dotnet run.
-**Run Frontend:** Open another terminal in the `TaskManager.Client` folder and run `ng serve`.
+**Run Backend:** Open a terminal in the `TaskManager.Server` folder and run dotnet run.
+**Run Frontend:** Open another terminal in the `taskmanager.client` folder and run `ng serve`.
 Visit `http://localhost:4200` to view the application in your browser.
 ## Environment Variables
 Set up the following environment variables in a `UserSecrets.json` file or your environment:
