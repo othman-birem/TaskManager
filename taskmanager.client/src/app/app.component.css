@@ -1,0 +1,42 @@
+﻿@font-face {
+    font-family: 'Funnel-Display';
+    src: url('/Fonts/Funnel_Display/static/FunnelDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Funnel-Display-Medium';
+    src: url('/Fonts/Funnel_Display/static/FunnelDisplay-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Funnel-Display-Bold';
+    src: url('/Fonts/Funnel_Display/static/FunnelDisplay-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('/Fonts/Rubik/static/Rubik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+main {
+    font-family: 'Funnel-Display';
+}
+
+:host {
+    max-width: 1280px;
+    text-align: center;
+}
+
+th, td {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+table {
+    margin: 0 auto;
+}

@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:4200",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\Users\\Othman\\Desktop\\Projects\\TaskManager\\TaskManager.Server\\..\\taskmanager.client",
+"MaxTimeoutInSeconds": "120"
+}
+}

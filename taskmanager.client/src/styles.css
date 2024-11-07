@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.Buy-button {
+    text-decoration: none;
+    display: inline-block;
+    background: #008000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.8rem;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.2s, box-shadow 350ms;
+    max-width: 100px;
+  }
+  .Buy-button:hover {
+    background-color: #52ca52;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(133, 231, 162, 0.6);
+  }
+  
+  .secondary-button {
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid rgba(253, 253, 253, 0.6);
+    border-radius: 20px;
+    border-width: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.2s, border-color 0.3s;
+    color: rgba(255, 255, 255, 0.877);
+    background: rgba(214, 214, 214, 0.3);
+    font-weight: lighter;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  .secondary-button:hover {
+    background-color: rgba(206, 215, 223, 0.7);
+    color: #fff;
+    border-color: #fff;
+    /* box-shadow: 0 12px 30px rgba(133, 220, 231, 0.2); */
+  }
+  .unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  img {
+    pointer-events: none;
+    image-rendering: optimizeQuality;
+  }

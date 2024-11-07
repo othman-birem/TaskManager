@@ -1,0 +1,1 @@
+C:\Users\Othman\Desktop\Projects\TaskManager\taskmanager.client\obj\Debug\taskmanager.client.esproj.CoreCompileInputs.cache

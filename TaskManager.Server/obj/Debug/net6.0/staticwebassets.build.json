@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "jn/V2k5DPF26s4BXIaM+m6aTs3K4gfajmH5k77eCBbM=",
+  "Source": "TaskManager.Server",
+  "BasePath": "_content/TaskManager.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Othman\\Desktop\\Projects\\TaskManager\\taskmanager.client\\taskmanager.client.esproj",
+      "Version": 2,
+      "Source": "taskmanager.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
