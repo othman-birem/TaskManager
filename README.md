@@ -123,7 +123,6 @@ SendGridApiKey: API key for SendGrid (for email notifications).
 Example:
 
 ```json
-Copy code
 {
   "DatabaseConnection": "Server=localhost;Database=TaskManager;User Id=sa;Password=YourPassword!",
   "SendGridApiKey": "your-sendgrid-api-key"
@@ -133,7 +132,6 @@ Copy code
 The project uses Entity Framework Core with SQL Server. Make sure your connection string is correct in `appsettings.json`:
 
 ```json
-Copy code
 "ConnectionStrings": {
   "DefaultConnection": "Server=localhost;Database=TaskManager;User Id=sa;Password=YourPassword!"
 }
