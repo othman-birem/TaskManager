@@ -46,7 +46,7 @@ To run this project locally, ensure you have the following installed:
 ### 1. Clone the Repository
 
   ```bash
-  git clone https://github.com/your-username/TaskManager.git
+  git clone https://github.com/othman-birem/TaskManager
   cd TaskManager
   ```
 ### 2. Install Dependencies
