@@ -1,0 +1,54 @@
+<!-- registration.component.html -->
+<div class="registration-container">
+    <h2>Register</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div>
+        <label for="firstName">First Name</label>
+        <input
+          type="text"
+          id="firstName"
+          [(ngModel)]="firstName"
+          name="firstName"
+          required
+        />
+      </div>
+  
+      <div>
+        <label for="secondName">Second Name</label>
+        <input
+          type="text"
+          id="secondName"
+          [(ngModel)]="secondName"
+          name="secondName"
+          required
+        />
+      </div>
+  
+      <div>
+        <label for="dateOfBirth">Date of Birth</label>
+        <input
+          type="date"
+          id="dateOfBirth"
+          [(ngModel)]="dateOfBirth"
+          name="dateOfBirth"
+          required
+        />
+      </div>
+  
+      <div>
+        <label for="occupation">Occupation</label>
+        <input
+          type="text"
+          id="occupation"
+          [(ngModel)]="occupation"
+          name="occupation"
+          required
+        />
+      </div>
+  
+      <button type="submit" [disabled]="!isFormValid()">
+        Register
+      </button>
+    </form>
+  </div>
+  
