@@ -33,3 +33,4 @@ C:\Users\Othman\Desktop\Projects\TaskManager\TaskManager.Server\obj\Debug\net6.0
 C:\Users\Othman\Desktop\Projects\TaskManager\TaskManager.Server\obj\Debug\net6.0\TaskManager.Server.pdb
 C:\Users\Othman\Desktop\Projects\TaskManager\TaskManager.Server\obj\Debug\net6.0\TaskManager.Server.genruntimeconfig.cache
 C:\Users\Othman\Desktop\Projects\TaskManager\TaskManager.Server\obj\Debug\net6.0\ref\TaskManager.Server.dll
+C:\Users\Othman\Desktop\Projects\TaskManager\TaskManager.Server\obj\Debug\net6.0\TaskManager.Server.sourcelink.json

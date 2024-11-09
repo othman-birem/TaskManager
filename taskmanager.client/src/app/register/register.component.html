@@ -45,6 +45,25 @@
           required
         />
       </div>
+
+      <div>
+        <label for="mail">Email</label>
+        <input
+          type="text"
+          id="mail"
+          [(ngModel)]="mail"
+          name="email"
+          required/>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          [(ngModel)]="password"
+          name="password"
+          required/>
+      </div>
   
       <button type="submit" [disabled]="!isFormValid()">
         Register
