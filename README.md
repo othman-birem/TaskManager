@@ -1,4 +1,4 @@
-# TaskManager
+# TaskManager 📅
 
 TaskManager is an intermediate-level full-stack task management system built with ASP.NET Core for the backend and Angular for the frontend. It provides comprehensive features for task creation, assignment, real-time collaboration, and analytics, making it easier for teams and individuals to stay organized and efficient.
 
@@ -51,12 +51,18 @@ To run this project locally, ensure you have the following installed:
   ```
 ### 2. Install Dependencies
 **Backend (ASP.NET Core)**
+
+<img src="https://s3-ap-southeast-1.amazonaws.com/homepage-media/wp-content/uploads/2020/03/04092434/NET_Core_Logo.png" alt="ASP.NET" height="100"/>
+
 Navigate to the backend directory and restore .NET packages:
 ```bash
 cd TaskManager.Server
 dotnet restore
 ```
 **Frontend (Angular)**
+
+<img src="https://user-images.githubusercontent.com/25181517/183890595-779a7e64-3f43-4634-bad2-eceef4e80268.png" alt="Angular" height="100"/>
+
 Navigate to the frontend directory and install Node dependencies:
 ```bash
 cd taskmanager.client
