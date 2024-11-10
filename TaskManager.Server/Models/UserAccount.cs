@@ -1,7 +1,12 @@
-﻿namespace TaskManager.Server.Modules
+﻿
+#nullable disable
+
+namespace TaskManager.Server.Models
 {
+    [PrimaryKey(nameof(Id))]
     public class UserAccount
     {
+        public string Id { get; set; }
         public string firstName { get; set; }
         public string secondName { get; set; }
         public DateTime dateOfBirth { get; set; }

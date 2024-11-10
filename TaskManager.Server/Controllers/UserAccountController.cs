@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TaskManager.Server.Modules;
+using TaskManager.Server.Models;
 
 namespace TaskManager.Server.Controllers
 {
@@ -16,6 +16,7 @@ namespace TaskManager.Server.Controllers
         {
             return Enumerable.Range(1, 2).Select(index => new UserAccount
             {
+                Id = "01",
                 firstName = "othman",
                 secondName = (index + 2).ToString(),
                 dateOfBirth = DateTime.Now,
