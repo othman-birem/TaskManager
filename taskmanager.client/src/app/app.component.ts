@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from './Services/Authentication/AuthService/auth.service';
 
 interface WeatherForecast {
   date: string;
@@ -17,21 +18,17 @@ interface WeatherForecast {
 export class AppComponent implements OnInit {
   public forecasts: WeatherForecast[] = [];
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, 
+              private router: Router, 
+              private auth: AuthService) {}
 
   ngOnInit() {
-    //this.getForecasts();
-  }
-
-  getForecasts() {
-    this.http.get<WeatherForecast[]>('/weatherforecast').subscribe(
-      (result) => {
-        this.forecasts = result;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+    if(this.auth.isLoggedIn){
+      this.router.navigate(['/']);
+    }
+    else{
+      this.router.navigate(['/login']);
+    }
   }
 
   title = 'taskmanager.client';

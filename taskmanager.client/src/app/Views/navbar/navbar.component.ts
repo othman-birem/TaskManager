@@ -1,5 +1,5 @@
 import { Component, Injectable, HostListener } from '@angular/core';
-import { ScrollService } from '../Services/scroll-service.service';
+import { ScrollService } from '../../Services/ScrollService/scroll-service.service';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 

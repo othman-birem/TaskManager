@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { UserAccount } from '../Models/user-account';
-import { UserAccountService } from '../Services/user-account.service';
+import { UserAccount } from '../../Models/user-account';
+import { UserAccountService } from '../../Services/UserService/user-account.service';
 
 
 @Component({
@@ -31,17 +31,6 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     this.createUser();
   }
-  // getUsers(){
-  //   this.http.get<UserAccount[]>('/useraccount').subscribe(
-  //     (result) => {
-  //       this.accounts = result;
-  //       console.log(this.accounts.length);
-  //     },
-  //     (error) => {
-  //       console.error(error);
-  //     }
-  //   )
-  // }
   createUser() {
     const user: UserAccount = {
       firstName: this.firstName,

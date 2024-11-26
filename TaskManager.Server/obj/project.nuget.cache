@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Hsol1Wehh24=",
+  "dgSpecHash": "LXuckSo9vCA=",
   "success": true,
   "projectFilePath": "C:\\Users\\Othman\\Desktop\\Projects\\TaskManager\\TaskManager.Server\\TaskManager.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Othman\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Othman\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\Othman\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Othman\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
-    "C:\\Users\\Othman\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\6.0.35\\microsoft.aspnetcore.spaproxy.6.0.35.nupkg.sha512",
+    "C:\\Users\\Othman\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.36\\microsoft.aspnetcore.authentication.jwtbearer.6.0.36.nupkg.sha512",
+    "C:\\Users\\Othman\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\6.0.36\\microsoft.aspnetcore.spaproxy.6.0.36.nupkg.sha512",
     "C:\\Users\\Othman\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Othman\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Othman\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.5\\microsoft.data.sqlclient.5.1.5.nupkg.sha512",

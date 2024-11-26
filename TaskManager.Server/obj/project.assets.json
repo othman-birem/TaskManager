@@ -46,6 +46,19 @@
           }
         }
       },
+      "BCrypt.Net-Next/4.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -59,7 +72,26 @@
           }
         }
       },
-      "Microsoft.AspNetCore.SpaProxy/6.0.35": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.36": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.35.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Microsoft.AspNetCore.SpaProxy/6.0.36": {
         "type": "package",
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.SpaProxy.dll": {}
@@ -1233,6 +1265,37 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
+    "BCrypt.Net-Next/4.0.3": {
+      "sha512": "W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "type": "package",
+      "path": "bcrypt.net-next/4.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net-next.4.0.3.nupkg.sha512",
+        "bcrypt.net-next.nuspec",
+        "ico.png",
+        "lib/net20/BCrypt.Net-Next.dll",
+        "lib/net20/BCrypt.Net-Next.xml",
+        "lib/net35/BCrypt.Net-Next.dll",
+        "lib/net35/BCrypt.Net-Next.xml",
+        "lib/net462/BCrypt.Net-Next.dll",
+        "lib/net462/BCrypt.Net-Next.xml",
+        "lib/net472/BCrypt.Net-Next.dll",
+        "lib/net472/BCrypt.Net-Next.xml",
+        "lib/net48/BCrypt.Net-Next.dll",
+        "lib/net48/BCrypt.Net-Next.xml",
+        "lib/net5.0/BCrypt.Net-Next.dll",
+        "lib/net5.0/BCrypt.Net-Next.xml",
+        "lib/net6.0/BCrypt.Net-Next.dll",
+        "lib/net6.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.0/BCrypt.Net-Next.dll",
+        "lib/netstandard2.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.1/BCrypt.Net-Next.dll",
+        "lib/netstandard2.1/BCrypt.Net-Next.xml",
+        "readme.md"
+      ]
+    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -1251,10 +1314,25 @@
         "logo.png"
       ]
     },
-    "Microsoft.AspNetCore.SpaProxy/6.0.35": {
-      "sha512": "ZC6oiLbFziwBarRqOhjJlF1W0uVf+j3kvn1YW6bOkpWQ7rsabrJ5sLsbpy+9CKxTXxixafLTIYSx8o4K/zklXg==",
+    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.36": {
+      "sha512": "vGDqvZUehbtKdoUzVO32N0Lxon+1piGO6qFnA8FNXEzWhrLN5uum8ZyhWgrWYSA4b6JuCBJ/wAC7rV38wBvLew==",
       "type": "package",
-      "path": "microsoft.aspnetcore.spaproxy/6.0.35",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.36",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
+        "microsoft.aspnetcore.authentication.jwtbearer.6.0.36.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.SpaProxy/6.0.36": {
+      "sha512": "33MgFYdm9iAcb/ZtxS+QuZNe21H0JmjOm1WNJYIDyED5f+gfJApv2tOkGLM7BQGEk/0dlCwcTnPP8JSVLy7M3Q==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.spaproxy/6.0.36",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1262,7 +1340,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "build/Microsoft.AspNetCore.SpaProxy.targets",
         "lib/net6.0/Microsoft.AspNetCore.SpaProxy.dll",
-        "microsoft.aspnetcore.spaproxy.6.0.35.nupkg.sha512",
+        "microsoft.aspnetcore.spaproxy.6.0.36.nupkg.sha512",
         "microsoft.aspnetcore.spaproxy.nuspec"
       ]
     },
@@ -3424,6 +3502,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BCrypt.Net-Next >= 4.0.3",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.36",
       "Microsoft.AspNetCore.SpaProxy >= 6.*-*",
       "Microsoft.EntityFrameworkCore >= 7.0.20",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.20",
@@ -3482,6 +3562,14 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "BCrypt.Net-Next": {
+            "target": "Package",
+            "version": "[4.0.3, )"
+          },
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[6.0.36, )"
+          },
           "Microsoft.AspNetCore.SpaProxy": {
             "target": "Package",
             "version": "[6.*-*, )"

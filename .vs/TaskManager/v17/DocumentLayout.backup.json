@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Othman\\Desktop\\Projects\\TaskManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AAF5D1CD-D12C-4969-8E98-8028152C6AE0}|TaskManager.Server\\TaskManager.Server.csproj|c:\\users\\othman\\desktop\\projects\\taskmanager\\taskmanager.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{AAF5D1CD-D12C-4969-8E98-8028152C6AE0}|TaskManager.Server\\TaskManager.Server.csproj|solutionrelative:taskmanager.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{AAF5D1CD-D12C-4969-8E98-8028152C6AE0}|TaskManager.Server\\TaskManager.Server.csproj|c:\\users\\othman\\desktop\\projects\\taskmanager\\taskmanager.server\\models\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAF5D1CD-D12C-4969-8E98-8028152C6AE0}|TaskManager.Server\\TaskManager.Server.csproj|solutionrelative:taskmanager.server\\models\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAF5D1CD-D12C-4969-8E98-8028152C6AE0}|TaskManager.Server\\TaskManager.Server.csproj|c:\\users\\othman\\desktop\\projects\\taskmanager\\taskmanager.server\\migrations\\20241110194912_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AAF5D1CD-D12C-4969-8E98-8028152C6AE0}|TaskManager.Server\\TaskManager.Server.csproj|solutionrelative:taskmanager.server\\migrations\\20241110194912_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AAF5D1CD-D12C-4969-8E98-8028152C6AE0}|TaskManager.Server\\TaskManager.Server.csproj|c:\\users\\othman\\desktop\\projects\\taskmanager\\taskmanager.server\\entitiesmanagement\\taskmanagercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AAF5D1CD-D12C-4969-8E98-8028152C6AE0}|TaskManager.Server\\TaskManager.Server.csproj|solutionrelative:taskmanager.server\\entitiesmanagement\\taskmanagercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AAF5D1CD-D12C-4969-8E98-8028152C6AE0}|TaskManager.Server\\TaskManager.Server.csproj|c:\\users\\othman\\desktop\\projects\\taskmanager\\taskmanager.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AAF5D1CD-D12C-4969-8E98-8028152C6AE0}|TaskManager.Server\\TaskManager.Server.csproj|solutionrelative:taskmanager.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AAF5D1CD-D12C-4969-8E98-8028152C6AE0}|TaskManager.Server\\TaskManager.Server.csproj|c:\\users\\othman\\desktop\\projects\\taskmanager\\taskmanager.server\\controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAF5D1CD-D12C-4969-8E98-8028152C6AE0}|TaskManager.Server\\TaskManager.Server.csproj|solutionrelative:taskmanager.server\\controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,53 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "20241110194912_InitialMigration.cs",
-              "DocumentMoniker": "C:\\Users\\Othman\\Desktop\\Projects\\TaskManager\\TaskManager.Server\\Migrations\\20241110194912_InitialMigration.cs",
-              "RelativeDocumentMoniker": "TaskManager.Server\\Migrations\\20241110194912_InitialMigration.cs",
-              "ToolTip": "C:\\Users\\Othman\\Desktop\\Projects\\TaskManager\\TaskManager.Server\\Migrations\\20241110194912_InitialMigration.cs",
-              "RelativeToolTip": "TaskManager.Server\\Migrations\\20241110194912_InitialMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "UserAccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Othman\\Desktop\\Projects\\TaskManager\\TaskManager.Server\\Controllers\\UserAccountController.cs",
+              "RelativeDocumentMoniker": "TaskManager.Server\\Controllers\\UserAccountController.cs",
+              "ToolTip": "C:\\Users\\Othman\\Desktop\\Projects\\TaskManager\\TaskManager.Server\\Controllers\\UserAccountController.cs",
+              "RelativeToolTip": "TaskManager.Server\\Controllers\\UserAccountController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwBoAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T19:55:41.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Othman\\Desktop\\Projects\\TaskManager\\TaskManager.Server\\Program.cs",
-              "RelativeDocumentMoniker": "TaskManager.Server\\Program.cs",
-              "ToolTip": "C:\\Users\\Othman\\Desktop\\Projects\\TaskManager\\TaskManager.Server\\Program.cs",
-              "RelativeToolTip": "TaskManager.Server\\Program.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAiwBEAAABkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T19:33:39.067Z",
+              "WhenOpened": "2024-11-26T09:09:21.272Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Othman\\Desktop\\Projects\\TaskManager\\TaskManager.Server\\appsettings.json",
-              "RelativeDocumentMoniker": "TaskManager.Server\\appsettings.json",
-              "ToolTip": "C:\\Users\\Othman\\Desktop\\Projects\\TaskManager\\TaskManager.Server\\appsettings.json \u2B24",
-              "RelativeToolTip": "TaskManager.Server\\appsettings.json \u2B24",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-10T19:22:34.631Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TaskManagerContext.cs",
-              "DocumentMoniker": "C:\\Users\\Othman\\Desktop\\Projects\\TaskManager\\TaskManager.Server\\EntitiesManagement\\TaskManagerContext.cs",
-              "RelativeDocumentMoniker": "TaskManager.Server\\EntitiesManagement\\TaskManagerContext.cs",
-              "ToolTip": "C:\\Users\\Othman\\Desktop\\Projects\\TaskManager\\TaskManager.Server\\EntitiesManagement\\TaskManagerContext.cs",
-              "RelativeToolTip": "TaskManager.Server\\EntitiesManagement\\TaskManagerContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "UserAccount.cs",
+              "DocumentMoniker": "C:\\Users\\Othman\\Desktop\\Projects\\TaskManager\\TaskManager.Server\\Models\\UserAccount.cs",
+              "RelativeDocumentMoniker": "TaskManager.Server\\Models\\UserAccount.cs",
+              "ToolTip": "C:\\Users\\Othman\\Desktop\\Projects\\TaskManager\\TaskManager.Server\\Models\\UserAccount.cs",
+              "RelativeToolTip": "TaskManager.Server\\Models\\UserAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T17:56:16.042Z",
+              "WhenOpened": "2024-11-26T09:09:16.814Z",
               "EditorCaption": ""
             }
           ]
