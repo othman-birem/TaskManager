@@ -13,13 +13,11 @@ namespace TaskManager.Server.Controllers
     [Route("[controller]")]
     public class UserAccountController : ControllerBase
     {
-        private readonly ILogger<UserAccountController> _logger;
         private readonly TaskManagerContext _taskManagerContext;
         private readonly IConfiguration _configuration;
 
-        public UserAccountController(ILogger<UserAccountController> logger, TaskManagerContext context, IConfiguration config)
+        public UserAccountController(TaskManagerContext context, IConfiguration config)
         {
-            _logger = logger;
             _taskManagerContext = context;
             _configuration = config;
         }

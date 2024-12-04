@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jn/V2k5DPF26s4BXIaM+m6aTs3K4gfajmH5k77eCBbM=",
+  "Hash": "Yph7GCFEYr1+2Mqm7WRWJ4kPitscAn3/Y+0UzQ1jH/4=",
   "Source": "TaskManager.Server",
   "BasePath": "_content/TaskManager.Server",
   "Mode": "Default",
@@ -19,5 +19,6 @@
     }
   ],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
