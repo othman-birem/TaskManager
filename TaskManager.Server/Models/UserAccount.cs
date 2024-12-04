@@ -5,11 +5,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TaskManager.Server.Models
 {
-    [PrimaryKey(nameof(Id))]
     public class UserAccount
     {
-        [StringLength(10)]
-        public string Id { get; set; }
+        [Key]
+        public Guid Id { get; set; }
         [Required]
         public string firstName { get; set; }
         [Required]
