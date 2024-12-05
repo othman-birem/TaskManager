@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  isLoading: boolean = false;
   username: string = '';
   password: string = '';
 
@@ -18,6 +19,7 @@ export class LoginComponent {
   }
 
   onSubmit() {
+    this.isLoading = true;
     this.authService.login(this.username, this.password)
       .pipe(first())
       .subscribe(
@@ -27,5 +29,6 @@ export class LoginComponent {
         error => {
           alert('Invalid email or password');
         });
+    this.isLoading = false;
   }
 }

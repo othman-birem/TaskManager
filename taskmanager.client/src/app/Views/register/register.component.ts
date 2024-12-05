@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { UserAccount } from '../../Models/user-account';
 import { UserAccountService } from '../../Services/UserService/user-account.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,6 +11,7 @@ import { UserAccountService } from '../../Services/UserService/user-account.serv
   styleUrl: './register.component.css'
 })
 export class RegisterComponent implements OnInit {
+  isLoading: boolean = false;
   public accounts: UserAccount[] = [];
   firstName: string = '';
   secondName: string = '';
@@ -18,7 +20,7 @@ export class RegisterComponent implements OnInit {
   mail: string = '';
   password: string = '';
   
-  constructor(private userService: UserAccountService){
+  constructor(private userService: UserAccountService, private router: Router){
 
   }
 
@@ -29,7 +31,9 @@ export class RegisterComponent implements OnInit {
   isFormValid = () => this.firstName && this.secondName && this.dateOfBirth && this.occupation;
 
   onSubmit() {
+    this.isLoading = true;
     this.createUser();
+    this.isLoading = false;
   }
   createUser() {
     const user: UserAccount = {
@@ -43,6 +47,7 @@ export class RegisterComponent implements OnInit {
     this.userService.createUser(user).subscribe(
       response => {
         console.log('User created successfully:', response);
+        this.router.navigate(['/login']);
       },
       error => {
         console.error('Error creating user:', error);

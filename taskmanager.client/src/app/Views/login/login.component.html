@@ -23,7 +23,11 @@
         />
       </div>
   
-      <button type="submit" [disabled]="!username || !password">
+      <div *ngIf="isLoading" class="loading-overlay">
+        <div class="spinner"></div>
+      </div>
+
+      <button type="submit" [disabled]="isLoading || !username || !password">
         Login
       </button>
     </form>

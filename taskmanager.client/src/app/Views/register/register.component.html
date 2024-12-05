@@ -1,7 +1,7 @@
 <!-- registration.component.html -->
 <div class="registration-container">
     <h2>Register</h2>
-    <form (ngSubmit)="onSubmit()">
+    <form *ngIf="!isLoading" (ngSubmit)="onSubmit()">
       <div>
         <label for="firstName">First Name</label>
         <input
@@ -64,7 +64,11 @@
           name="password"
           required/>
       </div>
-  
+      
+      <div *ngIf="isLoading" class="loading-overlay">
+        <div class="spinner"></div>
+      </div>
+      
       <button type="submit" [disabled]="!isFormValid()">
         Register
       </button>

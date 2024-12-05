@@ -1,11 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TaskManager.Server.EntitiesManagement;
 using TaskManager.Server.Models;
 using TaskManager.Server.Models.Records;
+using TaskManager.Server.Modules.Services;
 
 namespace TaskManager.Server.Controllers
 {
@@ -22,6 +20,7 @@ namespace TaskManager.Server.Controllers
             _configuration = config;
         }
         [HttpPost("register")]
+        //[Authorize]
         public async Task<IActionResult> Register([FromBody] UserAccount account)
         {
             try
@@ -49,10 +48,11 @@ namespace TaskManager.Server.Controllers
         public async Task<IActionResult> Login([FromBody] LoginLoad load)
         {
             var user = await _taskManagerContext.UserAccounts.FirstOrDefaultAsync(a => a.email.Equals(load.Email));
+            AuthService auth = new(_configuration);
 
-            if(user == null || !VerifyPassword(load.Password, user.password)) { return Unauthorized("Invalid Email or Password"); }
+            if(user == null || !auth.VerifyPassword(load.Password, user.password)) { return Unauthorized("Invalid Email or Password"); }
 
-            var token = GenerateJwtToken(user);
+            var token = auth.GenerateJwtToken(user);
 
             return Ok(new
             {
@@ -63,36 +63,5 @@ namespace TaskManager.Server.Controllers
                 SecondName = user.secondName
             });
         }
-
-        #region Helpers
-        private bool VerifyPassword(string password, string hash)
-        {
-            return BCrypt.Net.BCrypt.Verify(password, hash);
-        }
-
-        private string GenerateJwtToken(UserAccount user)
-        {
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            var claims = new[]
-            {
-                new Claim(ClaimTypes.Email, user.email),
-                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-                new Claim("firstName", user.firstName),
-                new Claim("secondName", user.secondName)
-            };
-
-            var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"],
-                audience: _configuration["Jwt:Audience"],
-                claims: claims,
-                expires: DateTime.UtcNow.AddDays(7),
-                signingCredentials: credentials
-            );
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
-        #endregion
     }
 }
