@@ -28,7 +28,7 @@ namespace TaskManager.Server.Controllers
             {
                 if (account == null) return BadRequest("Info cannot be null");
                 if(await _taskManagerContext.UserAccounts.AnyAsync(a => a.email == account.email)) return BadRequest("Email already exists");
-                account.Id = Guid.NewGuid().ToString();
+                account.Id = Guid.NewGuid();
                 account.password = BCrypt.Net.BCrypt.HashPassword(account.password);
 
                 _taskManagerContext.UserAccounts.Add(account);
@@ -78,7 +78,7 @@ namespace TaskManager.Server.Controllers
             var claims = new[]
             {
                 new Claim(ClaimTypes.Email, user.email),
-                new Claim(JwtRegisteredClaimNames.Sub, user.Id),
+                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
                 new Claim("firstName", user.firstName),
                 new Claim("secondName", user.secondName)
             };

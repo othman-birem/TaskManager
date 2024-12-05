@@ -21,7 +21,7 @@ namespace TaskManager.Server.Models
         [EmailAddress]
         public string email { get; set; }
         [Required]
-        [StringLength(100, MinimumLength = 6)]
+        [StringLength(100, MinimumLength = 6, ErrorMessage = "Password must be at least 6 characters long.")]
         [PasswordPropertyText]
         public string password { get; set; }
     }
