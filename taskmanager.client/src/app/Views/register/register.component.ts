@@ -1,6 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { UserAccount } from '../../Models/user-account';
+import { AccessPrivileges, UserAccount } from '../../Models/user-account';
 import { UserAccountService } from '../../Services/UserService/user-account.service';
 import { Router } from '@angular/router';
 
@@ -13,8 +12,8 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
   isLoading: boolean = false;
   public accounts: UserAccount[] = [];
-  firstName: string = '';
-  secondName: string = '';
+
+  fullName: string = '';
   dateOfBirth: string = '';
   occupation: string = '';
   mail: string = '';
@@ -28,21 +27,24 @@ export class RegisterComponent implements OnInit {
     
   }
 
-  isFormValid = () => this.firstName && this.secondName && this.dateOfBirth && this.occupation;
+  isFormValid = () => this.fullName && this.dateOfBirth && this.occupation;
 
   onSubmit() {
     this.isLoading = true;
     this.createUser();
     this.isLoading = false;
+    
   }
   createUser() {
     const user: UserAccount = {
-      firstName: this.firstName,
-      secondName: this.secondName,
+      Id: "",
+      fullName: this.fullName,
       dateOfBirth: this.dateOfBirth,
       occupation: this.occupation,
       email: this.mail,
-      password: this.password
+      password: this.password,
+      teamId: "",
+      accessPrivilege: AccessPrivileges.Admin
     };
     this.userService.createUser(user).subscribe(
       response => {

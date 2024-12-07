@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using TaskManager.Server.EntitiesManagement;
 using TaskManager.Server.Models;
 using TaskManager.Server.Models.Records;
@@ -33,7 +32,7 @@ namespace TaskManager.Server.Controllers
                 _taskManagerContext.UserAccounts.Add(account);
                 await _taskManagerContext.SaveChangesAsync();
 
-                return Ok(new { message = $"User created successfully. {account.firstName}" });
+                return Ok(new { message = $"User created successfully. {account.fullName}" });
             }
             catch (DbUpdateException ex)
             {
@@ -59,8 +58,7 @@ namespace TaskManager.Server.Controllers
                 Token = token,
                 UserId = user.Id,
                 Email = user.email,
-                FirstName = user.firstName,
-                SecondName = user.secondName
+                FirstName = user.fullName,
             });
         }
     }

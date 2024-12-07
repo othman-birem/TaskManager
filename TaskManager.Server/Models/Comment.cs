@@ -7,15 +7,22 @@ namespace TaskManager.Server.Models
     {
         [Key]
         public Guid Id { get; set; }
+
         [Required]
-        [ForeignKey(nameof(Task.Id))]
-        public string TaskId { get; set; }
+        public Guid TaskId { get; set; }
+
+        [ForeignKey(nameof(TaskId))]
+        public Task task { get; set; }
+
         [Required]
-        [ForeignKey(nameof(UserAccount.Id))]
-        public string UserId { get; set; }
+        public Guid UserId { get; set; }
+        [ForeignKey(nameof(UserId))]
+        public UserAccount userAccount { get; set; }
+
         [Required]
-        [MaxLength(300, ErrorMessage = "The comment content cannot exceed 300 characters.")]
+        [MaxLength(500, ErrorMessage = "The comment content cannot exceed 300 characters.")]
         public string Content { get; set; }
+
         [Required]
         public DateTime CreatedAt { get; set; }
 

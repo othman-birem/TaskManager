@@ -30,8 +30,7 @@ namespace TaskManager.Server.Modules.Services
             {
                 new Claim(ClaimTypes.Email, user.email),
                 new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-                new Claim("firstName", user.firstName),
-                new Claim("secondName", user.secondName)
+                new Claim("fullName", user.fullName),
             };
 
             var token = new JwtSecurityToken(

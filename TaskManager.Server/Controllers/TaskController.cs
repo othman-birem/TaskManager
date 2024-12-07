@@ -83,7 +83,6 @@ namespace TaskManager.Server.Controllers
                 return NotFound(new { Message = "Object not found." });
             }
 
-            task.AssignedUser = request.AssignedUser;
             task.CategoryId = request.CategoryId;
             task.Name = request.Name;
             task.Description = request.Description;

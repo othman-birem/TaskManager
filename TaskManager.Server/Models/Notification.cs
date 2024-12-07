@@ -9,26 +9,28 @@ namespace TaskManager.Server.Models
         [Key]
         public Guid Id { get; set; }
         [Required]
-        [ForeignKey(nameof(UserAccount.Id))]
-        public string UserId { get; set; }
+        public Guid UserId { get; set; }
+        [ForeignKey(nameof(UserId))]
+        public UserAccount User { get; set; }
         [Required]
         public DateTime DeliveredAt { get; set; }
         [Required]
+        [StringLength(1000)]
         public string Content { get; set; }
         [Required]
-        [DataType("integer")]
+        [EnumDataType(typeof(MetaData.NotificationType))]
         public MetaData.NotificationType Type { get; set; }
         [Required]
         public bool IsRead { get; set; }
 
         public Notification()
         {
-
+            IsRead = false;
         }
 
         public void MarkAsRead()
         {
-
+            IsRead = true;
         }
     }
 }

@@ -8,36 +8,43 @@ namespace TaskManager.Server.Models
     {
         [Key]
         public Guid Id { get; set; }
+
         [Required]
+        [MaxLength(200)]
         public string Name { get; set; }
+
         [Required]
+        [MaxLength(1000)]
         public string Description { get; set; }
+
         [Required]
-        [ForeignKey(nameof(UserAccount.Id))]
-        public string AssignedUser { get; set; }
+        public Guid CategoryId { get; set; }
+
+        [ForeignKey(nameof(CategoryId))]
+        public Category Category { get; set; }
+
         [Required]
-        [ForeignKey(nameof(Category.Id))]
-        public string CategoryId { get; set; }
-        [Required]
-        [DataType("integer")]
+        [EnumDataType(typeof(MetaData.TaskStatus))]
         public MetaData.TaskStatus Status { get; set; }
+
         [Required]
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreateDate { get; set; } = DateTime.UtcNow;
+
         [Required]
         public DateTime DueDate { get; set; }
 
         public Task()
         {
-
         }
 
-        public void Assign(string user)
+        public void Assign(Guid userId)
         {
 
         }
+
         public void ChangeStatus(MetaData.TaskStatus status)
         {
-
+            Status = status;
         }
     }
 }

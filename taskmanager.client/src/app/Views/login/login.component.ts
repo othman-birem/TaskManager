@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   isLoading: boolean = false;
-  username: string = '';
+  email: string = '';
   password: string = '';
 
   constructor(private authService: AuthService, private router: Router){
@@ -20,7 +20,7 @@ export class LoginComponent {
 
   onSubmit() {
     this.isLoading = true;
-    this.authService.login(this.username, this.password)
+    this.authService.login(this.email, this.password)
       .pipe(first())
       .subscribe(
         data => {

@@ -2,12 +2,12 @@
     <h2>Login</h2>
     <form (ngSubmit)="onSubmit()">
       <div>
-        <label for="username">Username</label>
+        <label for="email">Username</label>
         <input
           type="text"
-          id="username"
-          [(ngModel)]="username"
-          name="username"
+          id="email"
+          [(ngModel)]="email"
+          name="email"
           required
         />
       </div>
@@ -27,7 +27,7 @@
         <div class="spinner"></div>
       </div>
 
-      <button type="submit" [disabled]="isLoading || !username || !password">
+      <button type="submit" [disabled]="isLoading || !email || !password">
         Login
       </button>
     </form>

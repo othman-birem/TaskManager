@@ -5,16 +5,22 @@
         public enum TaskStatus
         {
             Pending,
-            OnWork,
+            InProgress,
             Success,
             Failed
         }
-        public enum TaskType { }
         public enum NotificationType
         {
             Warning,
             Error,
             Regular
+        }
+        public enum AccessPrivileges
+        {
+            Admin,
+            Manager,
+            Employee,
+            Observer
         }
     }
 }

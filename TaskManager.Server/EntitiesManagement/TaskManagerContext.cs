@@ -11,6 +11,6 @@ namespace TaskManager.Server.EntitiesManagement
         public DbSet<Category> Categories { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Notification> Notifications { get; set; }
-        public DbSet<Role> Roles { get; set; }
+        public DbSet<Team> Teams { get; set; }
     }
 }

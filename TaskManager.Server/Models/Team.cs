@@ -2,16 +2,11 @@
 
 namespace TaskManager.Server.Models
 {
-    public class Role
+    public class Team
     {
         [Key]
         public Guid Id { get; set; }
         [Required]
         public string Name { get; set; }
-
-        public Role()
-        {
-
-        }
     }
 }
