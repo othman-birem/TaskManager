@@ -1,159 +1,160 @@
 .home {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 2rem;
-    /* Hue blur effect */
-    position: relative;
-    z-index: 1;
-    background-image: url('/Images/desk.jpg');
-    background-size: cover;
-  }
-  
-  .separator{
-    border-bottom: 1px solid rgb(168, 168, 168,0.8);
-  }
-  
-  .bg-pan-left {
-      -webkit-animation: bg-pan-left 8s infinite alternate forwards;
-    animation: bg-pan-left 8s infinite alternate forwards;
-  }
-  .home::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Add a semi-transparent color overlay with a hue tint */
-    background: linear-gradient(45deg, rgba(209, 18, 18, 0.139),
-                               rgba(30, 85, 116, 0.605), rgba(27, 53, 75, 0.432), rgba(32, 79, 43, 0.67) );
-    background-size: 300% 300%;
-    /* animation: bg-pan-left 12s ease-in-out infinite; */
-    -webkit-animation: bg-pan-left 3s infinite alternate forwards;
-    animation: bg-pan-left 3s infinite alternate forwards;
-    /* Apply the blur effect */
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(5px);
-    z-index: -1;
-  }
-  
-  .home-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    justify-content: center;
-    align-items: baseline;
-    gap: 1rem;
-    position: relative;
-    z-index: 2;
-    margin-left: 5rem;
-    margin-top: 5rem;
-    padding-left: 2rem;
-    color: #fff;
-  }
-  
-  .home-content h1 {
-    font-family: Funnel-Display-Bold;
-    color: inherit;
-  }
-  
-  .home-content p {
-    color: inherit;
-    max-width: 600px;
-    font-size: 1.3rem;
-    font-weight: 300;
-    line-height: 1.6;
-    font-family: Rubik;
-  }
-  
-  .home-image{
-    padding: 1rem;
-    pointer-events: none;
-    background-color: #fff;
-    box-shadow: 0 0 20px #fff;
-    border-radius: 10%;
-    margin-right: 2rem;
-    margin-top: 5rem;
-  }
-  .home-image img {
-    image-rendering: optimizeSpeed;
-    /* position: relative; */
-    height: 22rem;
-    width: 25rem;
-  }
-  
-  /* .glass-panel {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  background-image: url("/Images/desk.jpg");
+  background-size: cover;
+}
+
+.separator {
+  border-bottom: 1px solid rgb(168, 168, 168, 0.8);
+}
+
+.bg-pan-left {
+  -webkit-animation: bg-pan-left 8s infinite alternate forwards;
+  animation: bg-pan-left 8s infinite alternate forwards;
+}
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Add a semi-transparent color overlay with a hue tint */
+  background: linear-gradient(
+    45deg,
+    rgba(209, 18, 18, 0.139),
+    rgba(30, 85, 116, 0.605),
+    rgba(27, 53, 75, 0.432),
+    rgba(32, 79, 43, 0.67)
+  );
+  background-size: 300% 300%;
+  /* animation: bg-pan-left 12s ease-in-out infinite; */
+  -webkit-animation: bg-pan-left 3s infinite alternate forwards;
+  animation: bg-pan-left 3s infinite alternate forwards;
+  /* Apply the blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
+  z-index: -1;
+}
+
+.home-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+  margin-top: 5rem;
+  padding-left: 2rem;
+  color: #fff;
+}
+
+.home-content h1 {
+  font-family: Funnel-Display-Bold;
+  color: inherit;
+}
+
+.home-content p {
+  color: inherit;
+  max-width: 600px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  font-family: Rubik;
+}
+
+.home-image {
+  padding: 1rem;
+  pointer-events: none;
+  background-color: #fff;
+  box-shadow: 0 0 20px #fff;
+  border-radius: 10%;
+  margin-right: 2rem;
+  margin-top: 5rem;
+}
+.home-image img {
+  image-rendering: optimizeSpeed;
+  /* position: relative; */
+  height: 22rem;
+  width: 25rem;
+}
+
+/* .glass-panel {
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.2);
   } */
-  
-  .button-group {
-    display: flex;
+
+.button-group {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.notice-banner p {
+  color: #000;
+  font-size: medium;
+}
+
+@-webkit-keyframes bg-pan-left {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes bg-pan-left {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@media (max-width: 450px) {
+  .home {
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: 1rem;
+    min-height: 80vh;
+  }
+  .home-image {
+    display: none;
+  }
+  .home-content {
+    justify-content: center;
+    justify-items: center;
     align-items: center;
-    gap: 2rem;
+    width: 90%;
+    margin-left: 0px;
+    margin-top: 5rem;
+    padding: 2.5rem 1rem 0px 1rem;
+  }
+  .home-content p {
+    text-align: center;
+    margin-left: 0;
+    font-size: 1.2rem;
+    text-wrap: balance;
+  }
+  .notice-banner {
+    width: 85%;
   }
   .notice-banner p {
-    color: #000;
-    font-size: medium;
-    
+    text-align: left;
+    font-size: 1rem;
   }
-  
-  @-webkit-keyframes bg-pan-left {
-    0% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  .button-group {
+    gap: 1rem;
   }
-  @keyframes bg-pan-left {
-    0% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  @media (max-width: 450px){
-    .home {
-      flex-direction: column;
-      gap: 0;
-      padding-bottom: 1rem;
-      min-height: 80vh;
-    }
-    .home-image {
-      display: none;
-    }
-    .home-content {
-      justify-content: center;
-      justify-items: center;
-      align-items: center;
-      width: 90%;
-      margin-left: 0px;
-      margin-top: 5rem;
-      padding: 2.5rem 1rem 0px 1rem;
-    }
-    .home-content p {
-      text-align: center;
-      margin-left: 0;
-      font-size: 1.2rem;
-      text-wrap: balance;
-    }
-    .notice-banner {
-      width: 85%;
-    } 
-    .notice-banner p {
-      text-align: left;
-      font-size: 1rem;
-    }
-    .button-group {
-      gap: 1rem;
-    }
-  }
-  
+}

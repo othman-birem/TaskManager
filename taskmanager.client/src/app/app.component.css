@@ -1,42 +1,68 @@
 ﻿@font-face {
-    font-family: 'Funnel-Display';
-    src: url('/Fonts/Funnel_Display/static/FunnelDisplay-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Funnel-Display";
+  src: url("/Fonts/Funnel_Display/static/FunnelDisplay-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Funnel-Display-Medium';
-    src: url('/Fonts/Funnel_Display/static/FunnelDisplay-Medium.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Funnel-Display-Medium";
+  src: url("/Fonts/Funnel_Display/static/FunnelDisplay-Medium.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Funnel-Display-Bold';
-    src: url('/Fonts/Funnel_Display/static/FunnelDisplay-Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Funnel-Display-Bold";
+  src: url("/Fonts/Funnel_Display/static/FunnelDisplay-Bold.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Rubik';
-    src: url('/Fonts/Rubik/static/Rubik-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Rubik";
+  src: url("/Fonts/Rubik/static/Rubik-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 main {
-    font-family: 'Funnel-Display';
+  font-family: "Funnel-Display";
 }
 
 :host {
-    max-width: 1280px;
-    text-align: center;
+  max-width: 1280px;
+  text-align: center;
 }
 
-th, td {
-    padding-left: 1rem;
-    padding-right: 1rem;
+th,
+td {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 table {
-    margin: 0 auto;
+  margin: 0 auto;
+}
+
+/* Sidebar region */
+.app-main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-content-wrapper {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.router-outlet-container {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.app-content-wrapper .with-sidebar {
+  margin-left: 8rem;
 }

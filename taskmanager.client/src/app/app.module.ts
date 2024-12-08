@@ -12,6 +12,8 @@ import { HomeComponent } from './Views/home/home.component';
 import { FooterComponent } from './Views/footer/footer.component';
 import { LoginComponent } from './Views/login/login.component';
 import { RegisterComponent } from './Views/register/register.component';
+import { SidebarComponent } from './Views/workspace-views/sidebar/sidebar.component';
+import { DashboardComponent } from './Views/workspace-views/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { RegisterComponent } from './Views/register/register.component';
     HomeComponent,
     FooterComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SidebarComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

@@ -24,7 +24,7 @@ export class LoginComponent {
       .pipe(first())
       .subscribe(
         data => {
-          this.router.navigate(['/']);
+          this.router.navigate(['/dashboard']);
         },
         error => {
           alert('Invalid email or password');

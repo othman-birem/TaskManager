@@ -7,6 +7,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class AuthService {
+  private isLoggedInSubject = new BehaviorSubject<boolean>(false);
+  isLoggedIn$ = this.isLoggedInSubject.asObservable();
+
   private currentUserSubject: BehaviorSubject<any>;
   public currentUser: Observable<any>;
 
@@ -15,6 +18,12 @@ export class AuthService {
       JSON.parse(localStorage.getItem('currentUser') || 'null')
     );
     this.currentUser = this.currentUserSubject.asObservable();
+    if (localStorage.getItem('currentUser')){
+      this.isLoggedInSubject.next(true);
+    }
+    else{
+      this.isLoggedInSubject.next(false);
+    }
   }
 
   login(email: string, password: string): Observable<any> {
@@ -25,6 +34,7 @@ export class AuthService {
           localStorage.setItem('token', response.token);
 
           this.currentUserSubject.next(response);
+          this.isLoggedInSubject.next(true);
         }
         return response;
       })
@@ -36,6 +46,7 @@ export class AuthService {
     localStorage.removeItem('token');
     
     this.currentUserSubject.next(null);
+    this.isLoggedInSubject.next(false);
   }
 
   public get isLoggedIn(): boolean {

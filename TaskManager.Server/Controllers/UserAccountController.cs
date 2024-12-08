@@ -57,7 +57,7 @@ namespace TaskManager.Server.Controllers
                 Token = token,
                 UserId = user.Id,
                 Email = user.email,
-                FirstName = user.fullName,
+                fullName = user.fullName,
             });
         }
     }

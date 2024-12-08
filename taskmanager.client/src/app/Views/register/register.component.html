@@ -1,76 +1,81 @@
 <!-- registration.component.html -->
 <div class="registration-container">
-    <h2>Register</h2>
-    <form *ngIf="!isLoading" (ngSubmit)="onSubmit()">
-      <div>
-        <label for="firstName">First Name</label>
-        <input
-          type="text"
-          id="firstName"
-          [(ngModel)]="fullName"
-          name="firstName"
-          required
-        />
-      </div>
-  
-      <div>
-        <label for="dateOfBirth">Date of Birth</label>
-        <input
-          type="date"
-          id="dateOfBirth"
-          [(ngModel)]="dateOfBirth"
-          name="dateOfBirth"
-          required
-        />
-      </div>
-  
-      <div>
-        <label for="occupation">Occupation</label>
-        <input
-          type="text"
-          id="occupation"
-          [(ngModel)]="occupation"
-          name="occupation"
-          required
-        />
+  <h2>Register</h2>
+  <form *ngIf="!isLoading" (ngSubmit)="onSubmit()">
+    <div class="form-container">
+      <div class="column-container">
+        <div>
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            id="firstName"
+            [(ngModel)]="fullName"
+            name="firstName"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="dateOfBirth">Date of Birth</label>
+          <input
+            type="date"
+            id="dateOfBirth"
+            [(ngModel)]="dateOfBirth"
+            name="dateOfBirth"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="occupation">Occupation</label>
+          <input
+            type="text"
+            id="occupation"
+            [(ngModel)]="occupation"
+            name="occupation"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="roles">Role</label>
+          <select name="roles" id="roles" [(ngModel)]="accessPrivilege">
+            <option value="" disabled selected>Select a role</option>
+            <option *ngFor="let role of accessPrivileges" [value]="role.value">
+              {{ role.value }}
+            </option>
+          </select>
+        </div>
       </div>
 
-      <div>
-        <label for="roles">Role</label>
-        <select name="roles" id="roles" [(ngModel)]="accessPrivilege">
-          <option value="" disabled selected>Select a role</option>
-          <option *ngFor="let role of accessPrivileges" [value]="role.value">
-            {{ role.value }}
-          </option>
-        </select>
-      </div>
+      <div class="separator"></div>
 
-      <div>
-        <label for="mail">Email</label>
-        <input
-          type="email"
-          id="mail"
-          [(ngModel)]="mail"
-          name="email"
-          required/>
+      <div class="column-container">
+        <div>
+          <label for="mail">Email</label>
+          <input
+            type="email"
+            id="mail"
+            [(ngModel)]="mail"
+            name="email"
+            required
+          />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            [(ngModel)]="password"
+            name="password"
+            required
+          />
+        </div>
       </div>
-      <div>
-        <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          [(ngModel)]="password"
-          name="password"
-          required/>
-      </div>
-      
-      <div *ngIf="isLoading" class="loading-overlay">
-        <div class="spinner"></div>
-      </div>
-      
-      <button type="submit" [disabled]="!isFormValid()">
-        Register
-      </button>
-    </form>
+    </div>
+    <button type="submit" [disabled]="!isFormValid()">Register</button>
+  </form>
+  <div *ngIf="isLoading" class="loading-overlay">
+    <div class="spinner"></div>
   </div>
-  
+</div>

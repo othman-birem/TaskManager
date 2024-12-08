@@ -1,11 +1,13 @@
 ﻿<main>
-    <app-navbar></app-navbar>
+  <app-navbar *ngIf="showNavbar"></app-navbar>
 
-    <section>
-        <router-outlet></router-outlet>
-    </section>
+  <div class="app-content-wrapper">
+    <app-sidebar *ngIf="showSidebar"></app-sidebar>
 
-    <section>
-        <app-footer></app-footer>
+    <section class="router-outlet-container" [ngClass]="{ 'with-sidebar': showSidebar }">
+      <router-outlet></router-outlet>
     </section>
+  </div>
+
+  <app-footer *ngIf="showNavbar"></app-footer>
 </main>

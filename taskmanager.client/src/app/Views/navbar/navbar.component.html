@@ -1,24 +1,56 @@
-<mat-toolbar class="navbar white-panel sticky-top black-foreground" color="primary" (scroll)="onWindowScroll()">
-    <button id="toggle" class="menu-toggle" (click)="isMenuOpen = !isMenuOpen">☰</button>
+<mat-toolbar
+  class="navbar white-panel sticky-top black-foreground"
+  color="primary"
+  (scroll)="onWindowScroll()"
+>
+  <button id="toggle" class="menu-toggle" (click)="isMenuOpen = !isMenuOpen">
+    ☰
+  </button>
 
-    <a routerLink="/" class="main-logo unselectable">
-      <img id="logo" height="40" src="Logo/booking.png" alt="logo"/><h1 id="title">Task Manager</h1>
-    </a>
-    <span class="spacer"></span>
+  <a routerLink="/" class="main-logo unselectable">
+    <img id="logo" height="40" src="Logo/booking.png" alt="logo" />
+    <h1 id="title">Task Manager</h1>
+  </a>
   
-    <a mat-button class="nav-link unselectable" (click)="scrollToPricing()">Pricing</a>
-    <a mat-button class="nav-link unselectable" (click)="ScrollToContact()">Contact</a>
-    <div class="language-selector">
-      <select title="language" (change)="switchLang($event)">
-        <option value="en">EN</option>
-        <option value="fr">FR</option>
-      </select>
-      <img id="languageIcon" src="Icons/britan.png" alt="Language Icon" class="language-icon">
-    </div>
-    <div *ngIf="isMenuOpen" class="menu">
-      <a mat-button class="nav-link unselectable" (click)="isMenuOpen = !isMenuOpen; scrollToPricing();">pricing</a>
-      <div class="separator"></div>
-      <a mat-button class="nav-link unselectable" (click)="isMenuOpen = !isMenuOpen; ScrollToContact();">contact</a>
-    </div>
+  <span class="spacer"></span>
+
+  <a routerLink="/login" color="accent" class="Buy-button unselectable">
+    Login
+  </a>
+  <a
+    href="https://github.com/othman-birem/TaskManager" target="_blank" rel="noopener"
+    mat-button
+    class="nav-link unselectable"
+    >Github</a
+  >
+  <a mat-button class="nav-link unselectable" (click)="ScrollToContact()"
+    >Contact</a
+  >
+  <div class="language-selector">
+    <select title="language" (change)="switchLang($event)">
+      <option value="en">EN</option>
+      <option value="fr">FR</option>
+    </select>
+    <img
+      id="languageIcon"
+      src="Icons/britan.png"
+      alt="Language Icon"
+      class="language-icon"
+    />
+  </div>
+  <div *ngIf="isMenuOpen" class="menu">
+    <a
+      href="https://github.com/othman-birem/TaskManager"
+      mat-button
+      class="nav-link unselectable"
+      >Github</a
+    >
+    <div class="separator"></div>
+    <a
+      mat-button
+      class="nav-link unselectable"
+      (click)="isMenuOpen = !isMenuOpen; ScrollToContact()"
+      >contact</a
+    >
+  </div>
 </mat-toolbar>
-  

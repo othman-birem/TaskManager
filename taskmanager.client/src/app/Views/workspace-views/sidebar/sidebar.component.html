@@ -1,0 +1,49 @@
+<div class="sidebar">
+  <div class="sidebar-header">
+    <img src="/Logo/booking-white.png" alt="white logo" height="30" />
+    <!-- <h2>TaskManager</h2> -->
+  </div>
+  <ul class="sidebar-menu">
+    <li>
+      <a
+        [class.selected]="selectedLink === 'Dashboard'"
+        (click)="selectLink('Dashboard')"
+        ><img
+          src="Icons/navigation/house-chimney-blank.png"
+          class="icon"
+          alt="Dashboard"
+        />Dashboard</a
+      >
+    </li>
+    <li>
+      <a
+        [class.selected]="selectedLink === 'Projects'"
+        (click)="selectLink('Projects')"
+        >Projects</a
+      >
+    </li>
+    <li>
+      <a
+        [class.selected]="selectedLink === 'Tasks'"
+        (click)="selectLink('Tasks')"
+        >Tasks</a
+      >
+    </li>
+    <li>
+      <a [class.selected]="selectedLink === 'Team'" (click)="selectLink('Team')"
+        >Team</a
+      >
+    </li>
+    <li>
+      <a
+        [class.selected]="selectedLink === 'Settings'"
+        (click)="selectLink('Settings')"
+        >Settings</a
+      >
+    </li>
+  </ul>
+
+  <a color="accent" class="secondary-button unselectable" (click)="logout()"
+    >Logout</a
+  >
+</div>
