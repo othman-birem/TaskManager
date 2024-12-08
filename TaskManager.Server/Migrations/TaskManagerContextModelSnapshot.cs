@@ -160,7 +160,8 @@ namespace TaskManager.Server.Migrations
                     b.Property<int>("AccessPrivilege")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("TeamId")
+                    b.Property<Guid?>("TeamId")
+                        .IsRequired()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("dateOfBirth")

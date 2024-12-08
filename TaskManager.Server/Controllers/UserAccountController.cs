@@ -19,7 +19,6 @@ namespace TaskManager.Server.Controllers
             _configuration = config;
         }
         [HttpPost("register")]
-        //[Authorize]
         public async Task<IActionResult> Register([FromBody] UserAccount account)
         {
             try

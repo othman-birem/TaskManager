@@ -1,20 +1,22 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace TaskManager.Server.Models
 {
     public class Comment
     {
         [Key]
+        [JsonConverter(typeof(StringToGuidConverter))]
         public Guid Id { get; set; }
 
-        [Required]
+        [JsonConverter(typeof(StringToGuidConverter))]
         public Guid TaskId { get; set; }
 
         [ForeignKey(nameof(TaskId))]
         public Task task { get; set; }
 
-        [Required]
+        [JsonConverter(typeof(StringToGuidConverter))]
         public Guid UserId { get; set; }
         [ForeignKey(nameof(UserId))]
         public UserAccount userAccount { get; set; }

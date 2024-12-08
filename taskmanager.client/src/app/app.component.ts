@@ -14,13 +14,13 @@ export class AppComponent implements OnInit {
               private auth: AuthService) {}
 
   ngOnInit() {
-    if(this.auth.isLoggedIn){
-      // TODO: Handle direction to dashboard
-      this.router.navigate(['/']);
-    }
-    else{
-      this.router.navigate(['/']);
-    }
+    // if(this.auth.isLoggedIn){
+    //   // TODO: Handle direction to dashboard
+    //   this.router.navigate(['/']);
+    // }
+    // else{
+    //   this.router.navigate(['/']);
+    // }
   }
 
   title = 'taskmanager.client';

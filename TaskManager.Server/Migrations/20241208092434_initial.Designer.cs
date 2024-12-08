@@ -12,8 +12,8 @@ using TaskManager.Server.EntitiesManagement;
 namespace TaskManager.Server.Migrations
 {
     [DbContext(typeof(TaskManagerContext))]
-    [Migration("20241207141154_tweaked")]
-    partial class tweaked
+    [Migration("20241208092434_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -163,7 +163,8 @@ namespace TaskManager.Server.Migrations
                     b.Property<int>("AccessPrivilege")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("TeamId")
+                    b.Property<Guid?>("TeamId")
+                        .IsRequired()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("dateOfBirth")

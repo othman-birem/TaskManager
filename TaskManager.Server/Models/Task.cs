@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using TaskManager.Server.Models.Common;
 
 namespace TaskManager.Server.Models
@@ -7,6 +8,7 @@ namespace TaskManager.Server.Models
     public class Task
     {
         [Key]
+        [JsonConverter(typeof(StringToGuidConverter))]
         public Guid Id { get; set; }
 
         [Required]
@@ -18,7 +20,9 @@ namespace TaskManager.Server.Models
         public string Description { get; set; }
 
         [Required]
+        [JsonConverter(typeof(StringToGuidConverter))]
         public Guid CategoryId { get; set; }
+
 
         [ForeignKey(nameof(CategoryId))]
         public Category Category { get; set; }

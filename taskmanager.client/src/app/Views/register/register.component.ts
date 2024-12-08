@@ -10,6 +10,13 @@ import { Router } from '@angular/router';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent implements OnInit {
+  accessPrivileges = Object.keys(AccessPrivileges)
+    .filter(key => !isNaN(Number(key)))
+    .map(key => ({
+      value: AccessPrivileges[key as unknown as number],
+      label: key
+    }));
+
   isLoading: boolean = false;
   public accounts: UserAccount[] = [];
 
@@ -18,6 +25,7 @@ export class RegisterComponent implements OnInit {
   occupation: string = '';
   mail: string = '';
   password: string = '';
+  accessPrivilege = 0;
   
   constructor(private userService: UserAccountService, private router: Router){
 
@@ -37,14 +45,14 @@ export class RegisterComponent implements OnInit {
   }
   createUser() {
     const user: UserAccount = {
-      Id: "",
+      Id: '',
       fullName: this.fullName,
       dateOfBirth: this.dateOfBirth,
       occupation: this.occupation,
       email: this.mail,
       password: this.password,
-      teamId: "",
-      accessPrivilege: AccessPrivileges.Admin
+      teamId: '',
+      accessPrivilege: this.accessPrivilege
     };
     this.userService.createUser(user).subscribe(
       response => {

@@ -7,19 +7,8 @@
         <input
           type="text"
           id="firstName"
-          [(ngModel)]="firstName"
+          [(ngModel)]="fullName"
           name="firstName"
-          required
-        />
-      </div>
-  
-      <div>
-        <label for="secondName">Second Name</label>
-        <input
-          type="text"
-          id="secondName"
-          [(ngModel)]="secondName"
-          name="secondName"
           required
         />
       </div>
@@ -47,9 +36,19 @@
       </div>
 
       <div>
+        <label for="roles">Role</label>
+        <select name="roles" id="roles" [(ngModel)]="accessPrivilege">
+          <option value="" disabled selected>Select a role</option>
+          <option *ngFor="let role of accessPrivileges" [value]="role.value">
+            {{ role.value }}
+          </option>
+        </select>
+      </div>
+
+      <div>
         <label for="mail">Email</label>
         <input
-          type="text"
+          type="email"
           id="mail"
           [(ngModel)]="mail"
           name="email"

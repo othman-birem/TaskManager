@@ -1,8 +1,8 @@
 export enum AccessPrivileges {
-    Admin = "Admin",
-    Manager = "Manager",
-    Employee = "Employee",
-    Observer = "Observer"
+    Admin = 0,
+    Manager = 1,
+    Employee = 2,
+    Observer =3
 }
 export interface UserAccount {
     Id: string;
